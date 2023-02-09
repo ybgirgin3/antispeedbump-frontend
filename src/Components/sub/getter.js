@@ -35,14 +35,14 @@ const Getter = (props) => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmission}>
         <Input placeholder="Instagram Username" onChange={handleChange} />
         <Switch
           onChange={() => {
             setCollect(!collect);
           }}
         />
-        <Button onClick={handleSubmission}>Submit</Button>
+        <Button>Submit</Button>
       </form>
       <div>
         <div>{data ? <Preview theme={'light'} data={data} /> : <Empty />}</div>
